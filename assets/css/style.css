@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+:root {
+  color-scheme: light;
+  --paper: #f7f6f1;
+  --ink: #233e4d;
+  --body: #3c4b52;
+  --muted: #626b6d;
+  --line: #cbd0cb;
+  --accent: #866235;
+  --mist: #e9edeb;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 32px; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "YuGothic", "Meiryo", sans-serif; font-size: 16px; line-height: 1.9; overflow-wrap: anywhere; }
+body, h1, h2, h3, h4, p, figure, dl, dd, ul { margin: 0; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; -webkit-tap-highlight-color: rgba(35, 62, 77, .12); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
+::selection { background: #d4dfdf; color: var(--ink); }
+.wrap { width: min(1200px, calc(100% - 112px)); margin-inline: auto; }
+.skip-link { position: absolute; z-index: 10; top: -80px; left: 24px; padding: 10px 20px; background: var(--ink); color: #fff; }
+.skip-link:focus { top: 16px; }
+.site-header { border-bottom: 1px solid var(--line); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 104px; gap: 24px; }
+.brand { display: inline-flex; align-items: center; gap: 17px; min-height: 44px; }
+.brand span { font-weight: 600; letter-spacing: .05em; font-size: 17px; }
+.header-logo { width: 73px; }
+.main-nav { display: flex; align-items: center; gap: 36px; font-size: 13px; font-weight: 600; letter-spacing: .04em; }
+.main-nav a { display: flex; align-items: center; gap: 19px; min-height: 44px; }
+.main-nav a span { color: var(--accent); font-size: 19px; }
+.intro { display: grid; grid-template-columns: minmax(0, 1fr) 320px; column-gap: 64px; padding-top: 68px; }
+.eyebrow { display: flex; align-items: center; gap: 13px; font-size: 12px; font-weight: 600; letter-spacing: .14em; }
+.small-rule { width: 25px; height: 2px; background: var(--accent); }
+h1 { font-size: clamp(32px, 3.45vw, 49px); line-height: 1.6; font-weight: 500; letter-spacing: .065em; margin-top: 24px; }
+.intro-description { margin-top: 22px; color: var(--body); font-size: 15px; line-height: 2.1; letter-spacing: .035em; }
+.identity-panel { display: flex; flex-direction: column; align-items: center; justify-content: space-between; align-self: stretch; min-height: 300px; padding: 26px 31px 28px; color: var(--paper); background: var(--ink); }
+.identity-caption { font-family: Arial, sans-serif; font-size: 9px; letter-spacing: .22em; color: #cbd7db; }
+.hero-logo { width: 244px; margin-block: 7px 6px; }
+.identity-name { font-size: 13px; letter-spacing: .16em; }
+.intro-index { grid-column: 1 / -1; display: flex; gap: 34px; align-items: center; padding: 29px 0 31px; margin-top: 40px; border-top: 1px solid var(--line); font-size: 13px; }
+.index-label { font-size: 11px; color: var(--muted); margin-right: auto; letter-spacing: .1em; }
+.intro-index a { display: flex; align-items: center; gap: 12px; min-height: 44px; }
+.intro-index a > span:last-child { margin-left: 18px; color: var(--accent); }
+.index-number { font: 11px Arial, sans-serif; color: var(--muted); }
+.business { padding-top: 25px; padding-bottom: 76px; }
+.section-topline { border-top: 1px solid var(--ink); padding-top: 19px; display: flex; align-items: baseline; justify-content: space-between; }
+.section-topline h2 { font-size: 15px; font-weight: 600; letter-spacing: .08em; }
+.section-topline p { font-size: 12px; color: var(--muted); letter-spacing: .06em; }
+.work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; margin-top: 36px; }
+.work-item-field { padding-top: 81px; }
+.work-heading { display: flex; align-items: baseline; gap: 17px; padding-bottom: 18px; }
+.work-number { font-family: Georgia, "Times New Roman", serif; font-size: 20px; font-style: italic; color: var(--accent); }
+.work-heading h3 { font-size: 29px; font-weight: 500; letter-spacing: .09em; line-height: 1.5; }
+.english-label { margin-left: auto; font: 10px Arial, sans-serif; letter-spacing: .16em; color: var(--muted); }
+.work-visual { background: #f0eee7; }
+.work-visual img { width: 100%; aspect-ratio: 3 / 2; object-fit: contain; }
+.work-description { padding-top: 24px; }
+.work-description h4 { font-size: 19px; font-weight: 600; letter-spacing: .05em; }
+.work-description p { margin-top: 10px; color: var(--body); font-size: 15px; line-height: 2; max-width: 32em; }
+.illustration-note { margin-top: 41px; font-size: 11px; color: var(--muted); text-align: right; letter-spacing: .03em; }
+.company-section { background: var(--mist); padding: 75px 0 83px; }
+.company-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 74px; }
+.company-heading .eyebrow { font-family: Arial, sans-serif; font-size: 10px; letter-spacing: .16em; color: var(--muted); }
+.company-heading h2 { font-size: 30px; font-weight: 500; letter-spacing: .08em; margin-top: 16px; }
+.company-heading > p:last-child { margin-top: 24px; color: var(--body); font-size: 14px; line-height: 2; }
+.company-facts { border-top: 1px solid #a5b1b4; }
+.company-facts > div { display: grid; grid-template-columns: 106px minmax(0, 1fr); gap: 16px; padding: 21px 0; border-bottom: 1px solid #c3cdce; }
+.company-facts dt { font-size: 12px; font-weight: 500; color: #526269; padding-top: 2px; }
+.company-facts dd { font-size: 14px; line-height: 1.9; }
+.site-footer { background: var(--ink); color: var(--paper); }
+.footer-inner { min-height: 154px; display: flex; align-items: center; gap: 30px; }
+.footer-logo { width: 73px; }
+.footer-brand span { font-size: 14px; font-weight: 500; }
+.footer-inner small { margin-left: auto; font: 10px Arial, sans-serif; letter-spacing: .12em; color: #c1ced2; }
+.back-to-top { display: inline-flex; gap: 24px; align-items: center; min-height: 44px; font-size: 11px; margin-left: 42px; }
+.back-to-top span { font-size: 19px; }
+@media (hover: hover) {
+  .main-nav a:hover, .intro-index a:hover { color: var(--accent); }
+  .brand:hover, .back-to-top:hover { opacity: .75; }
+}
+@media (min-width: 1500px) { .intro { padding-top: 80px; } }
+@media (max-width: 1050px) {
+  .wrap { width: calc(100% - 72px); }
+  .intro { grid-template-columns: minmax(0, 1fr) 260px; column-gap: 36px; padding-top: 50px; }
+  .identity-panel { min-height: 280px; padding: 24px; }
+  .hero-logo { width: 213px; }
+  h1 { font-size: 37px; letter-spacing: .035em; }
+  .desktop-break { display: none; }
+  .intro-description { max-width: 28em; }
+  .work-grid { gap: 30px; }
+  .work-heading { gap: 12px; }
+  .english-label { font-size: 9px; }
+  .company-grid { gap: 45px; grid-template-columns: .8fr 1.2fr; }
+}
+@media (max-width: 760px) {
+  .wrap { width: calc(100% - 40px); }
+  .header-inner { min-height: 118px; align-items: flex-start; flex-direction: column; gap: 0; padding-top: 16px; padding-bottom: 4px; }
+  .brand { gap: 13px; }
+  .brand span { font-size: 15px; }
+  .header-logo { width: 57px; }
+  .main-nav { width: 100%; justify-content: flex-end; gap: 29px; font-size: 12px; }
+  .main-nav a { gap: 11px; }
+  .main-nav a span { font-size: 16px; }
+  .intro { position: relative; display: block; padding-top: 32px; }
+  .eyebrow { font-size: 10px; gap: 10px; letter-spacing: .08em; }
+  .small-rule { width: 20px; }
+  h1 { font-size: clamp(28px, 7.6vw, 42px); line-height: 1.65; letter-spacing: .035em; margin-top: 16px; }
+  .intro-description { font-size: 14px; line-height: 2.05; letter-spacing: .025em; margin-top: 16px; max-width: 35em; }
+  .identity-panel { flex-direction: row; min-height: 0; padding: 14px 22px; margin-top: 20px; justify-content: flex-start; gap: 24px; }
+  .hero-logo { width: 112px; margin: 0; order: -1; }
+  .identity-caption { display: none; }
+  .identity-name { font-size: 13px; letter-spacing: .08em; }
+  .intro-index { gap: 24px; margin-top: 20px; padding: 11px 0 12px; font-size: 12px; justify-content: space-between; }
+  .index-label { display: none; }
+  .intro-index a { flex: 1; gap: 9px; }
+  .intro-index a > span:last-child { margin-left: auto; }
+  .intro-index a + a { border-left: 1px solid var(--line); padding-left: 20px; }
+  .business { padding-top: 15px; padding-bottom: 42px; }
+  .section-topline { padding-top: 16px; }
+  .section-topline h2 { font-size: 13px; }
+  .section-topline p { font-size: 10px; }
+  .work-grid { grid-template-columns: 1fr; gap: 43px; margin-top: 28px; }
+  .work-item-field { padding-top: 0; }
+  .work-heading { padding-bottom: 14px; gap: 14px; }
+  .work-heading h3 { font-size: 26px; }
+  .work-number { font-size: 18px; }
+  .english-label { font-size: 9px; }
+  .work-description { padding-top: 19px; }
+  .work-description h4 { font-size: 17px; }
+  .work-description p { font-size: 14px; margin-top: 8px; max-width: none; }
+  .illustration-note { font-size: 10px; margin-top: 30px; text-align: left; }
+  .company-section { padding: 42px 0 48px; }
+  .company-grid { grid-template-columns: 1fr; gap: 28px; }
+  .company-heading h2 { font-size: 26px; margin-top: 10px; }
+  .company-heading > p:last-child { font-size: 14px; margin-top: 14px; }
+  .company-facts > div { grid-template-columns: 76px minmax(0, 1fr); gap: 14px; padding: 17px 0; }
+  .company-facts dt { font-size: 11px; }
+  .company-facts dd { font-size: 13px; }
+  .footer-inner { display: grid; grid-template-columns: 1fr auto; gap: 20px; padding: 30px 0 24px; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-logo { width: 62px; }
+  .footer-brand span { font-size: 13px; }
+  .footer-inner small { margin-left: 0; }
+  .back-to-top { margin-left: 0; gap: 16px; font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print {
+  html { scroll-behavior: auto; }
+  body { background: #fff; font-size: 11pt; }
+  .wrap { width: 100%; }
+  .main-nav, .intro-index, .skip-link, .back-to-top { display: none; }
+  .intro { padding-top: 24px; }
+  .identity-panel, .site-footer { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .business { padding: 24px 0; }
+  .work-item { break-inside: avoid; }
+  .company-section { padding: 30px 0; }
+}
